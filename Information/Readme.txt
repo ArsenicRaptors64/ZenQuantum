@@ -5,12 +5,12 @@
              _____________________
 
                TABLE OF CONTENTS
-             _____________________
+		     _____________________
 
-             1. INTRODUCTION
+		     1. INTRODUCTION
              2. SYSTEM REQUIREMENTS
-             3. FEATURES
-             4. INSTALLATION
+		     3. FEATURES
+			 4. INSTALLATION
              5. RUNNING THE PROGRAM
              6. TROUBLESHOOTING
              7. ADDITIONAL LINKS
