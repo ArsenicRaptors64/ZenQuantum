@@ -30,12 +30,12 @@ class Download {
     private boolean download(String DURL, String Filename) throws Exception {
          String curDir = System.getProperty("user.dir");
         String UpdateURL = DURL;
-		File crDir=new File(curDir + "/Users/" + Username + "/Download/" + Filename);
+		File crDir=new File(curDir + "/Users/" + Username + "/Files/" + Filename);
 		crDir.mkdir();
         File file = new File(UpdateURL);
         try {            
             //downloadUsingNIO(UpdateURL, "Update.md5");
-            return downloadUsingNIO(UpdateURL, curDir + "/Users/" + Username + "/Download/" + Filename +"/"+ Filename);
+            return downloadUsingNIO(UpdateURL, curDir + "/Users/" + Username + "/Files/" + Filename +"/"+ Filename);
         } catch (Exception e) {
             return false;
         }

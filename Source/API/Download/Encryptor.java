@@ -20,13 +20,14 @@ class Encryptor
 	Console console=System.console();
 
 	protected void encr(String U)throws Exception
-	{
+	{		
 		Username=U;
 		Encryptor en=new Encryptor();
 		en.welcome();
 	}
 	private void welcome()throws Exception
 	{
+		
 		System.out.println("DISCLAIMER: FILE CANNOT BE RECOVERED IF THE CREDENTIALS ARE LOST.\n");
 		System.out.print("Enter the name of the file to be encrypted (with extension): ");
 		nm=console.readLine();
@@ -53,7 +54,7 @@ class Encryptor
 	void Encr() throws Exception
 	{
 		String curDir = System.getProperty("user.dir");
-		String newDir=curDir+"/Users/"+Username+"/Download/"+nm+"/";
+		String newDir=curDir+"/Users/"+Username+"/Files/"+nm+"/";
 		//File to be encrypted
 		FileInputStream inFile = new FileInputStream(newDir+nm);
 		//Encrypted Output of the fractal file
@@ -98,11 +99,11 @@ class Encryptor
 
 		byte[] output = cipher.doFinal();
 		if (output != null)
-		outFile.write(output);
-		File del=new File(newDir+nm);
-		del.delete();
+		outFile.write(output);		
 		inFile.close();
 		outFile.flush();
 		outFile.close();		
+		File del=new File(newDir+nm);
+		del.delete();
 	}
 }

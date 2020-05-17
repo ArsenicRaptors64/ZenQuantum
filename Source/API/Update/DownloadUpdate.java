@@ -28,9 +28,9 @@ class DownloadUpdate {
     protected boolean download() throws Exception {
         String curDir = System.getProperty("user.dir");
         //Download the Windows Build
-        String UpdateURL = "";
+        String UpdateURL = "https://raw.githubusercontent.com/ArsenicRaptors64/Zen-Quantum-Releases/master/Windows/LatestRelease.zip";
         //Download the Unix Build
-        //String UpdateURL = "";
+        //String UpdateURL = "https://raw.githubusercontent.com/ArsenicRaptors64/Zen-Quantum-Releases/master/Unix/LatestRelease.zip";
         //String ChecksumURL = "";
         File file = new File(UpdateURL);
         try {            

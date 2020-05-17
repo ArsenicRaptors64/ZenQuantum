@@ -22,7 +22,7 @@ package API;
  * <br>
  * @author Deepak Anil Kumar (DAK404)
  * @version 1.0.0
- * @since 08-December-2019
+ * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
  * - Module Name       : ZQ2: API_01<BR>
@@ -55,13 +55,13 @@ public class Information {
         System.out.println("######################################");
         System.out.println("#             Zen Quantum            #");
         System.out.println("#                                    #");
-        System.out.println("#            Version : 1.4           #");
+        System.out.println("#            Version : 1.6           #");
 		System.out.println("######################################");
 		System.out.println("# Information:                       #");
 		System.out.println("#                                    #");
-        System.out.println("# * Kernel : 2.6 [Elixir]            #");
+        System.out.println("# * Kernel : 2.7 [Elixir]            #");
         System.out.println("# * Channel: RELEASE BUILD           #");
-        System.out.println("# * Date   : 06.05.20 2146 +0530 GMT #");		
+        System.out.println("# * Date   : 09.05.20 2146 +0530 GMT #");		
         System.out.println("######################################\n");
 		return;
     }

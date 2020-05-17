@@ -8,9 +8,9 @@ ________________________________________________________________
 
 **********************************
 *                                * 
-* 09:48 PM 06-May-20 +0530 GMT   *
-* Revision        : 1.4.0        *
-* Kernel Version  : 2.6 [Elixir] *
+* 03:30 AM 09-May-20 +0530 GMT   *
+* Revision        : 1.6.0        *
+* Kernel Version  : 2.7 [Elixir] *
 *                                *
 **********************************
 
@@ -22,14 +22,20 @@ ________________________________________________________________
 4. Re-implemented the User Management System
 5. Updater is working and links are live
 6. Builds are available in the Release section.
+7. Fixed a bug where the encryptor didn't register username
+8. Added Editor 1.0!
+9. Fixed an issue with the documentation script
+10. 
 
 [BEBHIN]
 
 1. Added the program documentation for reference 
-(see index.html in project root folder)
+   (see index.html in project root folder)
 2. Re-Wrote the BuildScript.bat and the RunProgram.bat
 3. Tested the Unix Build using the WSL in Windows 10
 4. Proposed the feature to abstract the login program.
+5. Fixed the documentation for Updater
+6. Added documentation for Editor
 
 [SITHER]
 
@@ -40,6 +46,10 @@ ________________________________________________________________
       could have possible conflicts when multiple Admins joined
 	  the session
 	  (Issue ID: P3-MMM-0xA0001)
+   c. Discovered critical vulnerability in Encryptor program
+      where the username didnt get registered and crashed the
+	  entire program.
+
 2. Proposed changes for the Program UI to be more neat.   
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

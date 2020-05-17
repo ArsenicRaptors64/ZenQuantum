@@ -11,7 +11,7 @@ import API.*;
  * <br>
  * @author Deepak Anil Kumar (DAK404)
  * @version 1.0.0
- * @since 08-December-2019
+ * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
  * - Module Name       : ZQ2: API_01_S02<BR>
@@ -103,7 +103,7 @@ public class AddUser {
             conn.close();
 			String FilesList[] = {
             "/Users/"+UNM,
-            "/Users/"+UNM+"/Download"
+            "/Users/"+UNM+"/Files"
 			};
 			for(int i=0; i<FilesList.length; i++)
 			{

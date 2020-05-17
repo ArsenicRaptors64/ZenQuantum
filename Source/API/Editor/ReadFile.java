@@ -14,7 +14,7 @@
  *****************************************************
  */
 
-package API;
+package API.Editor;
 
 import java.io.*;
 
@@ -28,18 +28,23 @@ import java.io.*;
  * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
- * - Module Name       : ZQ2: API_02<BR>
+ * - Module Name       : ZQ2: API_S04<BR>
  * - Module Version    : 1.0.0<BR>
  * - Module Author     : Deepak Anil Kumar (DAK404), Bebhin Mathew<BR></p>
  */
-public class HelpViewer {
-
+public class ReadFile {
+	
+	String User="";
+	API.Information info=new API.Information();
 	/**
-     * This constructor has little use in this program.
+     * This constructor will receive the username of the logged in user from the previous module
      *
-     * This constructor is a stub. It doesnt have any usable part of the program.
+     * @param u: Stores the username of the logged in user
      */
-    public HelpViewer() {}
+    public ReadFile(String u) 
+	{
+		User=u;
+	}
 
     /**
      * This method loads the help file by using the FileReader and BufferedReader
@@ -47,25 +52,28 @@ public class HelpViewer {
      * Information files resides in the ./Information folder. 
 	 * Help files reside in the ./Information/Help folder
 	 *
-	 * @param FileName : the module/file that is requested by the program 
 	 * @throws Exception Used to catch general exceptions and error states in program
      */
-    public void ShowHelp(String FileName) throws Exception {
+    public void ShowFile() throws Exception {
+		Console console = System.console();
+		info.AboutProgram();
+		System.out.println("Enter the name of the file to be saved (with extension): ");
+		String FileName=console.readLine();
         String curDir = System.getProperty("user.dir");
-        Console console = System.console();
+        
 
         //A link to show the build info to the user's terminal
         API.Information ShowInfo = new API.Information();
         ShowInfo.AboutProgram();
 
         //Set the directory to the intended location where the help modules reside.
-        File file = new File(curDir + "/Information/" + FileName);
+        File file = new File(curDir + "/Users/"+ User + "/Files/" + FileName + "/"+ FileName);
 
         //A condition to check if the given file is found or not. This prevents exception, which may or may not disrupt the program.
 
         //This checks if the file doesnt exist. If it doesnt exist, the error text is shown on terminal.
         if (file.exists() == false) {
-            System.out.println("SYSTEM> The specified text module cannot be found/loaded.");
+            System.out.println("SYSTEM> The specified file cannot be read");
         }
 
         //If the file exists, the file is displayed on the terminal.

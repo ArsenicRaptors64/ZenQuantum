@@ -80,9 +80,9 @@ RAM	: 2 GB or higher
 STORAGE : 25 GB or higher
 NETWORK : 2 Mbps or better network speed
 
-┌───────┐
-│ NOTES │
-└───────┘
+
+NOTES:-
+
 - The minimum system requirements can support a small group of
 clients, it is recommended to have a better machine as servers
 to guarantee a good performance.

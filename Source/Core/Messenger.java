@@ -27,7 +27,7 @@ import java.util.*;
  * <br>
  * @author Deepak Anil Kumar (DAK404)
  * @version 1.0.0
- * @since 08-December-2019
+ * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
  * - Module Name       : ZQ2: M_01<BR>
@@ -41,7 +41,7 @@ public class Messenger {
     private String User = "";
     private boolean SB = false;
     private boolean Admin = false;
-	API.Download.DownloadInterface at=new API.Download.DownloadInterface();
+	API.Download.DownloadInterface at=new API.Download.DownloadInterface(User);
     //Write the messages to the public chatroom only now. Implement the private chatroom later
     String Loc = curDir + "/System/Public/ChatRooms/Chatroom.log";
     File file = new File(Loc);
@@ -92,7 +92,7 @@ public class Messenger {
         } else if (input.equalsIgnoreCase("") || input.equalsIgnoreCase(" "))
 			return true;
 		else if(input.equalsIgnoreCase("<Download>")){
-			at.DInterfaceScript(SB, User);
+			at.DInterfaceScript(SB);
 			return true;
 		}
 		else if(input.equalsIgnoreCase("<Encrypt>")){

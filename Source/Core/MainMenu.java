@@ -22,6 +22,7 @@ import java.text.*;
 import API.*;
 import API.Download.*;
 import API.Anima.*;
+import API.Editor.*;
 
 
 /**
@@ -30,7 +31,7 @@ import API.Anima.*;
  * <br>
  * @author Deepak Anil Kumar (DAK404)
  * @version 1.0.0
- * @since 08-December-2019
+ * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
  * - Module Name       : ZQ2: CM_03<BR>
@@ -39,18 +40,18 @@ import API.Anima.*;
  */
 public class MainMenu 
 {
-    //Initialize the streams
-    Console console = System.console();
-	API.Information ShowInfo = new API.Information();    
-    API.HelpViewer ViewHelp = new API.HelpViewer();
-	API.Download.DownloadInterface at=new API.Download.DownloadInterface();
-	
-    private boolean SB = false;
+	private boolean SB = false;
     private boolean Admin = false;
     private String User = "";
 	private char prompt='*';
 	private String cmd="";
-    
+	
+    //Initialize the streams
+    Console console = System.console();
+	API.Information ShowInfo = new API.Information();    
+    API.HelpViewer ViewHelp = new API.HelpViewer();
+	
+	
 	/**
      * This constructor is used to intialize the SecureBoot Variable.
      *
@@ -87,6 +88,9 @@ public class MainMenu
 	{
 		try
 		{
+		API.Download.DownloadInterface at=new API.Download.DownloadInterface(User);
+		API.Editor.textEdit ed=new API.Editor.textEdit(User);
+		API.Editor.ReadFile re=new API.Editor.ReadFile(User);
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 		while(true)
 		{
@@ -115,7 +119,7 @@ public class MainMenu
 		
 			else if(cmd.equalsIgnoreCase("Download"))
 			{
-				at.DInterfaceScript(SB, User);
+				at.DInterfaceScript(SB);
 			}
 			else if(cmd.equalsIgnoreCase("Decrypt"))
 			{
@@ -158,6 +162,14 @@ public class MainMenu
 			else if(cmd.equalsIgnoreCase("exit"))
 			{
 				return;
+			}
+			else if(cmd.equalsIgnoreCase("Edit"))
+			{				
+				ed.editScript();
+			}
+			else if(cmd.equalsIgnoreCase("read file"))
+			{				
+				re.ShowFile();
 			}
 			else if(cmd.equalsIgnoreCase(""))
 			{

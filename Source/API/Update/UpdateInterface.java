@@ -25,7 +25,7 @@ import API.*;
  * <br>
  * @author Deepak Anil Kumar (DAK404)
  * @version 1.0.0
- * @since 08-December-2019
+ * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
  * - Module Name       : ZQ2: API_S03<BR>
@@ -36,8 +36,18 @@ public class UpdateInterface {
     API.Information DispInfoObj = new API.Information();
     Console console = System.console();
 
+	/**
+     * This constructor has little use in this program.
+     *
+     * This constructor is a stub. It doesnt have any usable part of the program.
+     */
     public UpdateInterface() {}
-
+	
+	/**
+     * This script will run to update the program to the latest version
+	 *
+	 * @throws Exception Used to catch general exceptions and error states in program
+     */
     public void updateInterface() throws Exception {
         DispInfoObj.AboutProgram();
         System.out.println("Updater 6.2.4");

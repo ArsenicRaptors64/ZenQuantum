@@ -34,7 +34,7 @@ import API.Anima.*;
  * <br>
  * @author Deepak Anil Kumar (DAK404)
  * @version 1.0.0
- * @since 08-December-2019
+ * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
  * - Module Name       : ZQ2: CM_01<BR>
@@ -51,7 +51,7 @@ public class Boot {
     Console console = System.console();
     API.Information DispInfoObj = new API.Information();
 	DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-    
+    HelpViewer hv=new HelpViewer();
 
     /**
      * This constructor is used to intialize the SecureBoot Variable.

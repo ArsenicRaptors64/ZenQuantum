@@ -10,7 +10,7 @@ import API.Download.*;
  * <br>
  * @author Deepak Anil Kumar (DAK404)
  * @version 1.0.0
- * @since 08-December-2019
+ * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
  * - Module Name       : ZQ2: API_S02<BR>
@@ -19,31 +19,32 @@ import API.Download.*;
  */
 public class DownloadInterface
 {
-	private static String User;
+	private String User;
 	Console console=System.console();
 	
 	/**
-     * This constructor has little use in this program.
+     * This constructor initializes the username
      *
-     * This constructor is a stub. It doesnt have any usable part of the program.
+     * @param U  : Used to get the name of the user who is downloading the file
      */
-	public DownloadInterface()	{}
+	public DownloadInterface(String U)
+	{
+		User=U;
+	}
 	
 	/**
      * This method delegates the tasks to the subfunctions to download a file
 	 *
-	 * @param SB : Used to get the SecureBoot variable from the program
-	 * @param U  : Used to get the name of the user who is downloading the file
+	 * @param SB : Used to get the SecureBoot variable from the program 
 	 * @throws Exception Used to catch general exceptions and error states in program 
      */
-	public void DInterfaceScript(boolean SB,String U)throws Exception
+	public void DInterfaceScript(boolean SB)throws Exception
 	{
 	if(SB==false)
 	{
 		System.exit(0);
 	}
 	
-	User=U;
 	API.Information a=new API.Information();
 	a.AboutProgram();
 	System.out.println("SYSTEM> Type HELP to show help for download. Else press enter to continue");
@@ -79,6 +80,7 @@ public class DownloadInterface
      */
 	public void Encrypt()throws Exception
 	{
+		System.out.println(User);
 		API.Download.Encryptor en=new API.Download.Encryptor();
 		en.encr(User);
 	}

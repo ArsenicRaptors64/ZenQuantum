@@ -27,7 +27,7 @@ import java.io.*;
  * <br>
  * @author Deepak Anil Kumar (DAK404)
  * @version 1.0.0
- * @since 08-December-2019
+ * @since 06-May-2020
  * <p>
  * *** Technical Details ***<br>
  * - Module Name       : ZQ2: CM_01_S1<BR>
@@ -131,8 +131,8 @@ public class Setup {
     private void GetAdminData() throws Exception {
         //The admin username will always be #Administrator
         //The user must provide a password and a security key
-        obje.AboutProgram();
         while (true) {
+			obje.AboutProgram();
             System.out.println("2. Configure Administrator Account");
             System.out.println("This helps in setting up an administrator account.\nNote:\n-You cannot go online when logged in as an Administrator.\n-This account will be locally stored on this PC only.\n");
             System.out.println("Username: Administrator");

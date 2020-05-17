@@ -1,16 +1,16 @@
                RELEASE NOTES FOR 
                   ZEN QUANTUM
-                 VERSION: 0.0.2
+                 VERSION: 1.6
 
              _____________________
 
                TABLE OF CONTENTS
-		     _____________________
+             _____________________
 
-		     1. INTRODUCTION
+             1. INTRODUCTION
              2. SYSTEM REQUIREMENTS
-		     3. FEATURES
-			 4. INSTALLATION
+             3. FEATURES
+             4. INSTALLATION
              5. RUNNING THE PROGRAM
              6. TROUBLESHOOTING
              7. ADDITIONAL LINKS
@@ -80,9 +80,9 @@ RAM	: 2 GB or higher
 STORAGE : 25 GB or higher
 NETWORK : 2 Mbps or better network speed
 
-┌───────┐
-│ NOTES │
-└───────┘
+
+NOTES:-
+
 - The minimum system requirements can support a small group of
 clients, it is recommended to have a better machine as servers
 to guarantee a good performance.
@@ -142,20 +142,20 @@ functionality of the program.
 
 The program uses a Type 4 JDBC driver by SQLite which can be 
 updated by running the update commmand or by downloading the 
-latest driver and extracting the contents to the root of the
-program folder.
+latest driver and extracting the contents of the JAR file to
+the root of the program folder.
 
 The folder structure must be in this format after the setup.
 
 ./root_folder
-  ├ /API
-  ├ /Core
-  ├ /Information
-  ├ /org
-  ├ /System
-  ├ /Users
-  ├ Launcher.class
-  └ Run_Program (*.bat or *.sh)
+  |- /API
+  |- /Core
+  |- /Information
+  |- /org
+  |- /System
+  |- /Users
+  |- Launcher.class
+  |- Run_Program (*.bat or *.sh)
 
 If there are issues with the build, grab the latest one from 
 the official github repository or clone it to customize the 
@@ -197,16 +197,16 @@ _______________________
    ADDITIONAL LINKS
 _______________________
 
-Java Official Site	: https://java.com/
-OpenJDK Official Site	: https://jdk.java.net/
+Java Official Site      : https://java.com/
+OpenJDK Official Site   : https://jdk.java.net/
 Oracle JDK Official Site: https://www.oracle.com/technetwork/java/javase/downloads/index.html
 
-7Zip Official Site	: https://www.7-zip.org/
-WinRAR Official Site	: https://www.win-rar.com/
-WinZip Official Site	: https://www.winzip.com/
+7Zip Official Site      : https://www.7-zip.org/
+WinRAR Official Site    : https://www.win-rar.com/
+WinZip Official Site    : https://www.winzip.com/
 
-Official Download	: https://www.github.com/ <INSERT COMPLETE DOWNLOAD LINK>
-SQLite Official Site	: https://sqlite.org/
+Official Download       : https://github.com/ArsenicRaptors64/Zen-Quantum-Releases
+SQLite Official Site    : https://sqlite.org/
 
 -----------------------------------------------------------------------------
 _______________________
@@ -241,7 +241,6 @@ Bebhin Mathew		(R17CA199)
 Deepak Anil Kumar	(R17CA239)
 Sither Tsering		(R17CA254)
 
-Website	: https://ar64.github.io
 GitHub	: https://github.com/ArsenicRaptors64
 Email	: mailto://arsenicraptors64@gmail.com
 

@@ -43,7 +43,7 @@ class Decryptor
 		try
 		{
 			String curDir = System.getProperty("user.dir");
-			String newDir=curDir+"/Users/"+Username+"/Download/"+nm+"/";
+			String newDir=curDir+"/Users/"+Username+"/Files/"+nm+"/";
 			/* Description:
 			* Read the salt
 			* User must transfer salt, iv and password to the recipient securely
