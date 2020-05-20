@@ -17,6 +17,7 @@ class Encryptor
 {
 	private String nm, Pass, pw, Key, cpw, cKey;
 	private static String Username="";
+	String newDir="";
 	Console console=System.console();
 
 	protected void encr(String U)throws Exception
@@ -31,30 +32,43 @@ class Encryptor
 		System.out.println("DISCLAIMER: FILE CANNOT BE RECOVERED IF THE CREDENTIALS ARE LOST.\n");
 		System.out.print("Enter the name of the file to be encrypted (with extension): ");
 		nm=console.readLine();
-		System.out.println("Enter the password and key to encrypt the file.");
-		System.out.print("Password: ");
-		pw=String.valueOf(console.readPassword());
-		System.out.print("Security Key: ");
-		Key=String.valueOf(console.readPassword());
-		System.out.println("Re-Enter to confirm: ");
-		System.out.print("Password: ");
-		cpw=String.valueOf(console.readPassword());
-		System.out.print("Security Key: ");
-		cKey=String.valueOf(console.readPassword());
-		if(cpw.equals(pw) & cKey.equals(Key))
+		newDir="./Users/"+Username+"/Files/"+nm+"/";
+		
+		File f=new File(newDir+nm);
+		if(f.exists()==false)
 		{
-			Pass=pw+Key;
-			Encr();
+			System.out.println("The file cannot be found. Please try again.");
+			console.readLine();
+			return;
 		}
 		else
 		{
-			System.out.println("Credentials do not match.");
+			System.out.println("Enter the password and key to encrypt the file.");
+			System.out.print("Password: ");
+			pw=String.valueOf(console.readPassword());
+			System.out.print("Security Key: ");
+			Key=String.valueOf(console.readPassword());
+			System.out.println("Re-Enter to confirm: ");
+			System.out.print("Password: ");
+			cpw=String.valueOf(console.readPassword());
+			System.out.print("Security Key: ");
+			cKey=String.valueOf(console.readPassword());
+			if(cpw.equals(pw) & cKey.equals(Key))
+			{
+				Pass=pw+Key;
+				Encr();
+			}
+			else
+			{
+				System.out.println("Credentials do not match.");
+				console.readLine();
+			}
 		}
 	}
 	void Encr() throws Exception
 	{
 		String curDir = System.getProperty("user.dir");
-		String newDir=curDir+"/Users/"+Username+"/Files/"+nm+"/";
+
 		//File to be encrypted
 		FileInputStream inFile = new FileInputStream(newDir+nm);
 		//Encrypted Output of the fractal file
@@ -105,5 +119,6 @@ class Encryptor
 		outFile.close();		
 		File del=new File(newDir+nm);
 		del.delete();
+	
 	}
 }

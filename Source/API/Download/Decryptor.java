@@ -89,6 +89,7 @@ class Decryptor
 		catch(Exception e)
 		{
 			System.out.println("The entered password is incorrect. Please try again.");
+			console.readLine();
 		}
 	}
 }

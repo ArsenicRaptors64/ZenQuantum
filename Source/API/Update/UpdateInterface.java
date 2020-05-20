@@ -79,7 +79,7 @@ public class UpdateInterface {
         System.out.println("Press Enter to Restart the program.");
         console.readLine();
         //For Windows
-        new ProcessBuilder("cmd", "/c", "Run_Program.bat").inheritIO().start();
+        new ProcessBuilder("cmd", "/c", "java Launcher").inheritIO().start();
         //For Unix
         //new ProcessBuilder("/bin/bash", "-c", "sh Run_Program.sh").inheritIO().start();
         System.exit(0);

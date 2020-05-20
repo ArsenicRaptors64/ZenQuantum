@@ -52,17 +52,15 @@ public class Information {
      */
     public void AboutProgram() throws Exception {
         ClearScreen();
-        System.out.println("######################################");
-        System.out.println("#             Zen Quantum            #");
-        System.out.println("#                                    #");
-        System.out.println("#            Version : 1.6           #");
-		System.out.println("######################################");
-		System.out.println("# Information:                       #");
-		System.out.println("#                                    #");
-        System.out.println("# * Kernel : 2.7 [Elixir]            #");
-        System.out.println("# * Channel: RELEASE BUILD           #");
-        System.out.println("# * Date   : 09.05.20 2146 +0530 GMT #");		
-        System.out.println("######################################\n");
+        System.out.println("///////////////////////////////////////////////////////\n");
+        System.out.println("                  _____________________                  ");
+		System.out.println("                 /                    /");
+        System.out.println("                /   ZEN QUANTUM 2.0  / ");
+		System.out.println("               /____________________/\n");
+		System.out.println("            Powered By : ELIXIR KERNEL 2.7\n");
+		System.out.println("Channel   : RELEASE BUILD");
+		System.out.println("Build Date: 10-May-2020 0440 +0530\n");
+		System.out.println("///////////////////////////////////////////////////////\n");
 		return;
     }
 	
