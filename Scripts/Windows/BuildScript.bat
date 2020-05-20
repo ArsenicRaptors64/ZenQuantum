@@ -1,5 +1,5 @@
 @echo off
-echo Vulcan Build Tool 1.0 Final
+echo Zen Quantum Build Tool 1.0 Final
 echo
 echo Building program...
 echo Note: Compiled files can be found in Binaries folder.
