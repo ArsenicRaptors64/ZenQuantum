@@ -25,7 +25,7 @@ ________________________________________________________________
 7. Fixed a bug where the encryptor didn't register username
 8. Added Editor 1.0!
 9. Fixed an issue with the documentation script
-10. 
+10.Changed the login counter datatype to byte
 
 [BEBHIN]
 

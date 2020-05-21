@@ -8,10 +8,10 @@ ________________________________________________________________
 
 **********************************
 *                                * 
-* 09:48 PM 06-May-20 +0530 GMT   *
-* Revision        : 1.4.0        *
-* Kernel Version  : 2.6 [Elixir] *
+* 04:13 AM 10-May-20 +0530 GMT   *
+* Kernel Version  : 2.7 [Elixir] *
 *                                *
+* Release Build                  *
 **********************************
 
 [DEEPAK]
@@ -24,14 +24,20 @@ ________________________________________________________________
 6. Fixed the update and download sections,
    which shows as download successful even
    when it was failed.
+7. Fixed Encryption and Decryption crashes when 
+   invalid file name was provided.
+8. Added TextEditor
+   
 
 [BEBHIN]
 
 1. Added the program documentation for reference 
-(see index.html in project root folder)
+   (see index.html in project root folder)
 2. Re-Wrote the BuildScript.bat and the RunProgram.bat
 3. Tested the Unix Build using the WSL in Windows 10
 4. Proposed the feature to abstract the login program.
+5. Added a New UI to the program.
+
 
 [SITHER]
 
@@ -42,8 +48,9 @@ ________________________________________________________________
       could have possible conflicts when multiple Administrators
       joined the session
       (Issue ID: P3-MMM-0xA0001)
-   c. Discovered the download bug.
-2. Proposed changes for the Program UI to be more neat.   
+   c. Discovered the download bug, and resolved it.
+2. Proposed changes for the Program UI to be more neat.
+3. Updated the website.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 END OF FILE

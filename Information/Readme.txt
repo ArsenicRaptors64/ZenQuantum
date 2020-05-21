@@ -70,16 +70,24 @@ Minimum System Requirements:
 
 CPU	: Intel Core i3 (Clarkdale) or better
 RAM	: 512 MB or higher
-STORAGE : 1 GB Hard Drive or higher
+STORAGE : 2 GB Hard Drive or higher
 NETWORK : 24 Kbps or better network speed
 
 Recommended System Requirements:
 
-CPU	: Intel Core i7 (Skylake) or better
-RAM	: 2 GB or higher
-STORAGE : 25 GB or higher
+CPU	: Intel Core i7 (Sandy Bridge) or better
+RAM	: 1 GB or higher
+STORAGE : 5 GB or higher
 NETWORK : 2 Mbps or better network speed
 
+___________
+
+ Fun Fact!
+___________
+
+The program stress test proved that upto 85 instances could be
+run simultaneously on an 8GB RAM system whilst all of them 
+did an input and output operation simultaneously!
 
 NOTES:-
 
@@ -216,7 +224,7 @@ _______________________
 
 Programming:          Deepak Anil Kumar
                       Sither Tsering
-					  Bebhin Mathew
+                      Bebhin Mathew
 
 Documentation:        Bebhin Mathew
                       Deepak Anil Kumar
@@ -224,7 +232,7 @@ Documentation:        Bebhin Mathew
 Testing:              Bebhin Mathew
                       Sither Tsering
 
-Mentoring:	          Prof. Ravi Dandu
+Mentoring:            Prof. Ravi Dandu
 
 -----------------------------------------------------------------------------
 _______________________
@@ -241,8 +249,9 @@ Bebhin Mathew		(R17CA199)
 Deepak Anil Kumar	(R17CA239)
 Sither Tsering		(R17CA254)
 
-GitHub	: https://github.com/ArsenicRaptors64
-Email	: mailto://arsenicraptors64@gmail.com
+GitHub        : https://github.com/ArsenicRaptors64
+Documentation : https://arsenicraptors64.github.io/ZenQuantum/
+Email         : mailto://arsenicraptors64@gmail.com
 
 -----------------------------------------------------------------------------
 END OF FILE

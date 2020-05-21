@@ -1,31 +1,29 @@
 Zen Quantum User Reference Documentation 1.3
 
-~~~~~~~~~~~~~~~~~~~
-Boot Program Manual 
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+TextEditor Manual 
+~~~~~~~~~~~~~~~~~
 ___________________________________________________________________________________
 
 Introduction:
 
-Boot program will let the user to perform task which do not require a user level of
-permission access. The guest user cannot proceed into the main program until they 
-have registered and logged into the program.
+If users want to store notes, lists, or any text files, this program is for that!
+This will help the users to efficiently store the files in their files. When the
+user exits, the file is automatically saved. The user will need to specify the
+name of the file before anything can be written to file.
 
+This simple text editor is lightweight and serves the purpose. Advanced features
+will be added to the module in future updates.
+
+Additionally, the user can view the created files by using the Read File command.
+This will display the documents contents saved, when user provides the file name.
 ___________________________________________________________________________________
 
 Available Commands:
 
 These show the commands available to the guest level.
 
-Readme        - Views the readme file
-EULA          - Views the License of the program
-Changelog     - Views the changelog of the program
-Help          - Views the helpfile for the boot program
-
-Login         - This will take you to the login program to sign in to an existing account
-Create User   - This will take you to the sign up program to create a new, standard user
-Update        - This will run the updater program to update it to the latest release
-Exit          - This will exit the program
+<Exit>        - This will exit the program
 
 ___________________________________________________________________________________
 
