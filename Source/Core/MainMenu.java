@@ -59,13 +59,29 @@ public class MainMenu
 	 * @param Username   : Used to receive the username from Login
      */
     protected MainMenu(boolean SecureBoot, String Username) {
-        SB = SecureBoot;
-        User = Username;
-		if(Username.equals("Administrator"))
+		if(SecureBoot==false)
 		{
-			Admin=true;
-			prompt='!';
+			System.out.println("SecureBoot fuse tripped. Exiting Program... ");
+			System.exit(0);
 		}
+		else
+		{
+			if(Username.equalsIgnoreCase("")|Username.equalsIgnoreCase(" "))
+			{
+				System.out.println("Unauthorized user detected. Exiting Program... ");
+				System.exit(0);				
+			}
+			else
+			{
+				SB = SecureBoot;
+				User = Username;
+				if(Username.equals("Administrator"))
+				{
+					Admin=true;
+					prompt='!';
+				}
+			}
+		}        
     }
 	
 	/**
@@ -75,10 +91,6 @@ public class MainMenu
      */
 	protected void MenuScript()throws Exception
 	{
-		if(SB==false) {
-			System.out.println("SecureBoot tripped. Exiting...");
-			System.exit(0);
-		}
 		choices();
 		System.exit(0);
 		
@@ -152,6 +164,10 @@ public class MainMenu
             //Option to view the program about
             else if (cmd.equalsIgnoreCase("Readme")) {
                 ViewHelp.ShowHelp("Readme.txt");
+
+            }
+			else if (cmd.equalsIgnoreCase("Credits")) {
+                ViewHelp.ShowHelp("Credits.txt");
 
             }
             //Option to view the changelog

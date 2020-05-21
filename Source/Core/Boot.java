@@ -59,7 +59,15 @@ public class Boot {
      * @param SecureBoot : Used to transfer the SecureBoot status to the program
      */
     public Boot(boolean SecureBoot) {
-        SB = SecureBoot;
+		if(SecureBoot==false)
+		{
+			System.out.println("SecureBoot fuse tripped. Exiting Program... ");
+			System.exit(0);
+		}
+		else
+		{
+			SB = SecureBoot;
+		}
     }
 	
 	/**
@@ -68,10 +76,6 @@ public class Boot {
      * @throws Exception Used to catch general exceptions and error states in program
      */	
     public void BootRoutine() throws Exception {
-        if (SB != true) {
-            System.out.println("SecureBoot Tripped. Exiting program.");
-            System.exit(1);
-        }
         File SysChk = new File(curDir + "/System");
         File UsrChk = new File(curDir + "/Users");
         if ((SysChk.exists() == false) & (UsrChk.exists() == false)) {
@@ -127,6 +131,10 @@ public class Boot {
                 ViewHelp.ShowHelp("Readme.txt");
 
             }
+			else if (command.equalsIgnoreCase("Credits")) {
+                ViewHelp.ShowHelp("Credits.txt");
+
+            }
             //Option to view the changelog
             else if (command.equalsIgnoreCase("Changelog")) {
                 ViewHelp.ShowHelp("Changelog-Master.txt");
@@ -150,13 +158,22 @@ public class Boot {
 class Login {
 	DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 	private static String User="";
-    private static int count = 5;
+    private static byte count = 5;
     private boolean SB = false;
     Console console = System.console();
 
 	
-    Login(boolean SecureBoot) {
-        SB = SecureBoot;
+    Login(boolean SecureBoot) 
+	{
+		if(SecureBoot==false)
+		{
+			System.out.println("SecureBoot fuse tripped. Exiting Program... ");
+			System.exit(0);
+		}
+		else
+		{
+			SB=SecureBoot;
+		}
     }
     private boolean GetLoginInfo() throws Exception {
 		//the login interface to the program.

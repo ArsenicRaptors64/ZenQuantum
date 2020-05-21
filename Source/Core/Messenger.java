@@ -47,9 +47,17 @@ public class Messenger {
     File file = new File(Loc);
 	
 	Messenger(boolean SecureBoot, String username, boolean admin) {
-        SB = SecureBoot;
-        User = username;
-        Admin = admin;
+        if(SecureBoot==false)
+		{
+			System.out.println("SecureBoot fuse tripped. Exiting Program... ");
+			System.exit(0);
+		}
+		else
+		{
+			SB = SecureBoot;
+			User = username;
+			Admin = admin;
+		}
     }
 	
 	
@@ -76,7 +84,7 @@ public class Messenger {
         if (input.equalsIgnoreCase("<T>")) {
             Templates();
 			return true;
-        } else if (input.equalsIgnoreCase("exit") || input.equalsIgnoreCase("Quit")) {
+        } else if (input.equalsIgnoreCase("<exit>") || input.equalsIgnoreCase("<Quit>")) {
             return false;
         } else if (input.equalsIgnoreCase("<delete>")) {
             if (Admin == true) {
@@ -124,7 +132,6 @@ public class Messenger {
 	
 	
     private void WriteMessageLog(String User, String Message, String Location) throws Exception {
-        String temp = Message.toLowerCase();
         String[] Censor = {
             "fuck",
             "bitch",
@@ -132,11 +139,11 @@ public class Messenger {
             "asshole",
             "cunt",
             "nigga",
-            "nude"
+            "nude",
+			"bastard"
         };
         for (int i = 0; i < Censor.length; i++) {
-            if (temp.matches(".*" + Censor[i] + ".*") | temp.contains(Censor[i]))
-                Message = temp.replaceAll("(?i)" + Censor[i], "****");
+            Message = Message.replaceAll("(?i)" + Censor[i] + "(?i)", "****");
         }
         Date date = new Date();
         BufferedWriter obj = new BufferedWriter(new FileWriter(file, true));

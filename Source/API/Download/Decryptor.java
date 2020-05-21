@@ -15,6 +15,8 @@ class Decryptor
 {
   private String nm, Pass, pw, Key;
   private static String Username="";
+  private String newDir="";
+  String curDir = System.getProperty("user.dir");
   Console console=System.console();
 	protected void dcr(String U)throws Exception
 	{
@@ -28,22 +30,33 @@ class Decryptor
       	System.out.println("DISCLAIMER: FILE CANNOT BE RECOVERED IF THE CREDENTIALS ARE LOST.\n");
 		System.out.print("Enter the name of the file to be Decrypted (with extension): ");
 		nm=console.readLine();
-		System.out.println("Enter the password and key to encrypt the file.");
-		System.out.print("Password: ");
-		pw=String.valueOf(console.readPassword());
-		System.out.print("Security Key: ");
-		Key=String.valueOf(console.readPassword());
-	    Pass=pw+Key;
-		System.out.println("Attempting to decrypt file....");
-		Decr();
+		newDir=curDir+"/Users/"+Username+"/Files/"+nm+"/";
+		File f=new File(newDir+nm+".LOCK");
+		if(f.exists()==false)
+		{
+			System.out.println("The file cannot be found. Please try again.");
+			console.readLine();
+			return;
+		}
+		else
+		{
+			System.out.println("Enter the password and key to decrypt the file.");
+			System.out.print("Password: ");
+			pw=String.valueOf(console.readPassword());
+			System.out.print("Security Key: ");
+			Key=String.valueOf(console.readPassword());
+			Pass=pw+Key;
+			System.out.println("Attempting to decrypt file....");
+			Decr();
+			System.out.println("File Successfully Decrypted! Press Enter to Continue.");
+			console.readLine();
+		}
 	}
       
 	void Decr() throws Exception
 	{
 		try
 		{
-			String curDir = System.getProperty("user.dir");
-			String newDir=curDir+"/Users/"+Username+"/Files/"+nm+"/";
 			/* Description:
 			* Read the salt
 			* User must transfer salt, iv and password to the recipient securely

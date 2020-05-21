@@ -27,7 +27,7 @@ public class Launcher
 {
   public static void main(String[] Args)throws Exception
   {
-    System.out.println("Booting Program: Vulcan");
+    System.out.println("Booting Program: Zen Quantum 2.0");
     Boot a=new Boot(true);
     a.BootRoutine();
   }
