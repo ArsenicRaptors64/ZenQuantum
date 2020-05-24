@@ -72,13 +72,17 @@ public class Information {
 	 * @throws Exception Used to catch general exceptions and error states in program
 	 */
     public void ClearScreen() throws Exception {
-        //For Windows Builds use this
-        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-		
-        //For Linux/Unix or Mac Builds use this
-        //System.out.print("\033[H\033[2J");
-        //System.out.flush();
-		
+		if(System.getProperty("os.name").contains("Windows"))
+		{
+			//For Windows Builds use this
+			new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		}
+		else
+		{
+			//For Linux/Unix or Mac Builds use this
+			System.out.print("\033[H\033[2J");
+			System.out.flush();
+		}		
 		return;
     }
 }
