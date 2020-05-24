@@ -54,12 +54,16 @@ public class UpdateInterface {
 		System.out.println("Release Builds.");
         System.out.println("SYSTEM> Initiating update.\n[ATTENTION] : THE UPDATER WILL DOWNLOAD THE LATEST RELEASE AND INSTALL IT.\n[WARNING] : DO NOT CHANGE NETWORK STATES, REMOVE DRIVES, TURN OFF DEVICE OR CLOSE THIS PROGRAM. DOING SO MAY RENDER THE PROGRAM UNUSABLE.\n[ATTENTION] : You will be logged out of your current session, and will need to restart the program and re-login to continue.\n");
         System.out.println("-------------------------");
-        //for Windows
-        System.out.println("SYSTEM> Downloading program from: \n");
-
-        //for Unix
-        //System.out.println("SYSTEM> Downloading program from: ");
-
+        if(System.getProperty("os.name").contains("Windows"))
+		{
+			//for Windows
+			System.out.println("SYSTEM> Downloading program from: https://raw.githubusercontent.com/ArsenicRaptors64/Zen-Quantum-Releases/master/Windows/LatestRelease.zip");
+		}
+		else
+		{
+			//for Unix
+			System.out.println("SYSTEM> Downloading program from: https://raw.githubusercontent.com/ArsenicRaptors64/Zen-Quantum-Releases/master/Unix/LatestRelease.zip");
+		}
         if (download() == true) {
             System.out.println("SYSTEM> Update downloaded successfully.");
             System.out.println("SYSTEM> Update file location: ./Update.zip\n");
